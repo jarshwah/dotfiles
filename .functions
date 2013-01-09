@@ -163,3 +163,13 @@ function unquarantine() {
 		xattr -r -d "$attribute" "$@"
 	done
 }
+
+# Create a temporary RAM disk
+function make_ram_disk {
+   GB=$(($1*1024*2048))
+   diskutil erasevolume HFS+ "ramdisk" `hdiutil attach -nomount ram://$GB`
+}
+
+function eman () {
+  MANWIDTH=160 MANPAGER='col -bx' man $@ | subl
+}
