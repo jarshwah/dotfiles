@@ -28,8 +28,3 @@ export PYTHONSTARTUP=~/.pythonrc
 # Virtualenv
 export WORKON_HOME=$HOME/Development/.virtualenvs
 export PROJECT_HOME=$HOME/Development/repos
-
-# PATH
-PATH="/usr/local/bin:/usr/local/sbin:${PATH}"
-PATH="/usr/local/opt/coreutils/libexec/gnubin:$PATH"
-export PATH

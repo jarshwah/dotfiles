@@ -6,6 +6,8 @@ alias .....="cd ../../../.."
 alias ~="cd ~" # `cd` is probably faster to type though
 alias -- -="cd -"
 
+alias b="vim ~/.bash_profile"
+
 # Shortcuts
 alias d="cd ~/Development"
 alias dl="cd ~/Downloads"
