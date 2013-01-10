@@ -42,6 +42,7 @@ brew install libtool
 brew install libvorbis
 brew install mad
 brew install mod_wsgi
+brew install ngrep
 brew install node
 brew install opencore-amr
 brew install ossp-uuid
