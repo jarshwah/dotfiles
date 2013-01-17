@@ -47,6 +47,7 @@ brew install ngrep
 brew install node
 brew install opencore-amr
 brew install ossp-uuid
+brew install --universal pcre
 brew install pkg-config
 brew install postgresql
 brew install pstree
