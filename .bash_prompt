@@ -52,4 +52,4 @@ function parse_git_branch() {
 }
 
 export PS1="\[${BOLD}${ORANGE}\]\u\[$WHITE\] \[$GREEN\]\w\[$MAGENTA\] $ \[$RESET\]"
-export PS2="\[$ORANGE\]→ \[$RESET\]"
+export PS2="\[$ORANGE\]-> \[$RESET\]"
