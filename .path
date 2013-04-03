@@ -1,0 +1,12 @@
+# PATH
+
+PATH="$HOME/bin:$PATH"
+
+# Brew first
+PATH="/usr/local/bin:/usr/local/sbin:${PATH}"
+# Use GNU tools rather than Apple ones
+PATH="/usr/local/opt/coreutils/libexec/gnubin:$PATH"
+# Python3 execs
+PATH="/usr/local/share/python3:${PATH}"
+
+export PATH

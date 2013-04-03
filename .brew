@@ -51,6 +51,7 @@ brew install --universal pcre
 brew install pkg-config
 brew install postgresql
 brew install pstree
+brew install python3
 brew install rabbitmq
 brew install readline
 brew install rename
