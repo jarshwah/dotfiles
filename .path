@@ -8,6 +8,6 @@ PATH="/usr/local/bin:/usr/local/sbin:${PATH}"
 PATH="/usr/local/opt/coreutils/libexec/gnubin:$PATH"
 # Python3 execs
 PATH="/usr/local/share/python3:${PATH}"
-# Allow brew ruby to work correctly
-PATH="$(brew --prefix ruby)/bin:${PATH}"
+# NPM
+PATH="/usr/local/share/npm/bin:${PATH}"
 export PATH
