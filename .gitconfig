@@ -79,3 +79,8 @@
 
 [push]
 	default = simple
+[user]
+	name = Josh Smeaton
+	email = josh.smeaton@gmail.com
+[branch]
+	autosetuprebase = always
