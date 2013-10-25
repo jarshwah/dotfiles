@@ -1,7 +1,5 @@
 # PATH
 
-PATH="$HOME/bin:$PATH"
-
 # Brew first
 PATH="/usr/local/bin:/usr/local/sbin:${PATH}"
 # Use GNU tools rather than Apple ones
@@ -10,4 +8,6 @@ PATH="/usr/local/opt/coreutils/libexec/gnubin:$PATH"
 PATH="/usr/local/share/python3:${PATH}"
 # NPM
 PATH="/usr/local/share/npm/bin:${PATH}"
+# Local bin first!
+PATH="$HOME/bin:$PATH"
 export PATH
