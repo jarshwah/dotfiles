@@ -23,6 +23,10 @@ brew tap homebrew/dupes
 brew tap homebrew/apache
 brew install homebrew/dupes/grep
 
+# Use Casks to install relevant software
+brew tap phinze/homebrew-cask
+brew install brew-cask
+
 # Install everything else
 
 brew install ack
@@ -62,6 +66,17 @@ brew install tree
 brew install wget
 brew install xz
 
+# install casks
+
+brew cask install google-chrome
+brew cask install virtualbox
+brew cask install vagrant
+brew cask install vlc
+brew cask install iterm2
+brew cask install sublime-text-3
+brew cask install alfred
+brew cask install lastpass-universal
+brew cask install usb-overdrive
 
 # Remove outdated versions from the cellar
 brew cleanup
