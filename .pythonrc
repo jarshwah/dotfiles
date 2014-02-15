@@ -9,7 +9,7 @@ except ImportError as exception:
     print('Shell Enhancement module problem: {1}').format(exception)
 else:
     # Enable Tab Completion
-    if sys.platform == 'darwin':     # different bind for OSX
+    if 'libedit' in readline.__doc__:     # different bind libedit
         readline.parse_and_bind("bind ^I rl_complete")
     else:
         readline.parse_and_bind("tab: complete")
