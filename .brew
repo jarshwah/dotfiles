@@ -64,7 +64,6 @@ brew install ssh-copy-id
 brew install sshuttle
 brew install tree
 brew install wget
-brew install wireshark --with-x
 brew install xz
 
 # install casks
