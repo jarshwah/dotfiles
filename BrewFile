@@ -1,0 +1,66 @@
+# Install command-line tools using Homebrew
+# Usage: `bundle Brewfile`
+
+# Make sure we’re using the latest Homebrew
+update
+
+# Upgrade any already-installed formulae
+upgrade
+
+# Install GNU core utilities (those that come with OS X are outdated)
+install coreutils
+# Install GNU `find`, `locate`, `updatedb`, and `xargs`
+install findutils --default-names
+install gnu-sed --default-names
+# Install Bash 4
+install bash
+install bash-completion
+install vim --override-system-vi
+
+# Install wget with IRI support
+install wget --enable-iri
+
+tap homebrew/dupes
+tap homebrew/apache
+install homebrew/dupes/grep
+
+install --universal pcre
+
+install ack
+install autoconf
+install automake
+install git
+install go
+install htop
+install htop-osx
+install lame
+install libao
+install libogg
+install libsndfile
+install libtool
+install libvorbis
+install lunchy
+install mad
+install mercurial
+install nginx
+install ngrep
+install nmap
+install node
+install opencore-amr
+install openssl
+install ossp-uuid
+install pkg-config
+install postgresql
+install pstree
+install python3
+install readline
+install rename
+install ssh-copy-id
+install tmux
+install tree
+install wget
+install xpdf
+install xz
+install zopfli
+
+cleanup

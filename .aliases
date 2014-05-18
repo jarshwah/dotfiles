@@ -16,11 +16,10 @@ alias p="cd ~/Development/repos/"
 alias g="git"
 alias h="history"
 alias j="jobs"
-alias v="vim"
-alias m="mate"
-alias s="subl"
 alias o="open"
 alias oo="open ."
+
+alias pubkey="more ~/.ssh/id_rsa.pub | pbcopy | echo '=> Public key copied to pasteboard.'"
 
 # Detect which `ls` flavor is in use
 if ls --color > /dev/null 2>&1; then # GNU `ls`
@@ -57,8 +56,8 @@ alias update='sudo softwareupdate -i -a; brew update; brew upgrade; brew cleanup
 
 # IP addresses
 alias ip="dig +short myip.opendns.com @resolver1.opendns.com"
-alias localip="ipconfig getifaddr en1"
-alias ips="ifconfig -a | grep -o 'inet6\? \(\([0-9]\+\.[0-9]\+\.[0-9]\+\.[0-9]\+\)\|[a-fA-F0-9:]\+\)' | sed -e 's/inet6* //'"
+alias localip="ipconfig getifaddr en0"
+alias ips="ifconfig -a | grep -o 'inet6\? \(addr:\)\?\s\?\(\(\([0-9]\+\.\)\{3\}[0-9]\+\)\|[a-fA-F0-9:]\+\)' | awk '{ sub(/inet6? (addr:)? ?/, \"\"); print }'"
 
 # Enhanced WHOIS lookups
 alias whois="whois -h whois-servers.net"
@@ -146,3 +145,6 @@ alias chromekill="ps ux | grep '[C]hrome Helper --type=renderer' | grep -v exten
 
 # Lock the screen (when going AFK)
 alias afk="/System/Library/CoreServices/Menu\ Extras/User.menu/Contents/Resources/CGSession -suspend"
+
+# Reload the shell (i.e. invoke as a login shell)
+alias reload="exec $SHELL -l"

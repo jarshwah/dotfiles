@@ -17,10 +17,14 @@ export LESS_TERMCAP_md="$ORANGE"
 # Don’t clear the screen after quitting a manual page
 export MANPAGER="less -X"
 
+# Enable history and tab complete for stock python
 export PYTHONSTARTUP=~/.pythonrc
 
-# CLI (override bash_prompt?)
-# export PS1="\[\033[0;32m\]${PS1}\[\033[m\]"
+# Always enable colored `grep` output
+export GREP_OPTIONS="--color=auto"
+
+# Link Homebrew casks in `/Applications` rather than `~/Applications`
+export HOMEBREW_CASK_OPTS="--appdir=/Applications"
 
 # Virtualenv
 export WORKON_HOME=$HOME/Development/.virtualenvs

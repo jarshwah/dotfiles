@@ -1,0 +1,26 @@
+# Install native apps
+# Usage: `brew bundle Caskfile`
+
+install caskroom/cask/brew-cask
+tap caskroom/versions
+
+cask install alfred 2> /dev/null
+cask install firefox 2> /dev/null
+cask install google-chrome 2> /dev/null
+cask install google-drive 2> /dev/null
+cask install google-hangouts 2> /dev/null
+cask install istat-menus 2> /dev/null
+cask install iterm2 2> /dev/null
+cask install java 2> /dev/null
+cask install lastpass-universal 2> /dev/null
+cask install limechat 2> /dev/null
+cask install skype 2> /dev/null
+cask install sublime-text3 2> /dev/null
+cask install the-unarchiver 2> /dev/null
+cask install usb-overdrive 2> /dev/null
+cask install vagrant 2> /dev/null
+cask install virtualbox 2> /dev/null
+cask install vmware-fusion 2> /dev/null
+cask install vlc 2> /dev/null
+
+cleanup
