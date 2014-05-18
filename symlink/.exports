@@ -25,10 +25,3 @@ export GREP_OPTIONS="--color=auto"
 
 # Link Homebrew casks in `/Applications` rather than `~/Applications`
 export HOMEBREW_CASK_OPTS="--appdir=/Applications"
-
-# Virtualenv
-export WORKON_HOME=$HOME/Development/.virtualenvs
-export PROJECT_HOME=$HOME/Development/repos
-
-# Vagrant
-export VAGRANT_HOME=$HOME/Data/vagrant_home

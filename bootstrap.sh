@@ -4,7 +4,6 @@ cd "$(dirname "${BASH_SOURCE}")"
 DOTFILES_ROOT=$(pwd)
 
 set -e
-set -x
 
 echo ''
 
@@ -87,16 +86,27 @@ link_file () {
 }
 
 link_dotfiles () {
-  info 'linking dotfiles'
+  user 'linking dotfiles'
 
   local overwrite_all=false backup_all=false skip_all=false
 
   for src in $(find "$DOTFILES_ROOT/symlink" -maxdepth 1)
   do
-    dst="$HOME/TESTDOTS/$(basename "${src}")"
-    #dst="$HOME/.$(basename "${src%.*}")"
+    dst="$HOME/$(basename "${src}")"
     link_file "$src" "$dst"
   done
 }
 
+install_homebrew() {
+    # Check for Homebrew
+    if test ! $(which brew)
+    then
+      echo "  Installing Homebrew for you."
+      ruby -e "$(curl -fsSL https://raw.github.com/Homebrew/homebrew/go/install)" > /tmp/homebrew-install.log
+    fi
+
+    echo "  To install packages execute `brew bundle $HOME/BrewFile` and `brew bundle $HOME/CaskFile`"
+}
+
 link_dotfiles
+install_homebrew
