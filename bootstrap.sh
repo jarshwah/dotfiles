@@ -90,7 +90,7 @@ link_dotfiles () {
 
   local overwrite_all=false backup_all=false skip_all=false
 
-  for src in $(find "$DOTFILES_ROOT/symlink" -maxdepth 1)
+  for src in $(find "$DOTFILES_ROOT/symlink" -depth 1)
   do
     dst="$HOME/$(basename "${src}")"
     link_file "$src" "$dst"
