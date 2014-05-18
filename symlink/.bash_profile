@@ -12,8 +12,6 @@ shopt -s cdspell
 shopt -s cmdhist
 
 # Enable some Bash 4 features when possible:
-# * `autocd`, e.g. `**/qux` will enter `./foo/bar/baz/qux`
-# * Recursive globbing, e.g. `echo **/*.txt`
 for option in autocd globstar extglobs; do
 	shopt -s "$option" 2> /dev/null
 done
@@ -28,7 +26,7 @@ complete -W "NSGlobalDomain" defaults
 # Add `killall` tab completion for common apps
 complete -o "nospace" -W "Contacts Calendar Dock Finder Mail Safari iTunes SystemUIServer Terminal Twitter" killall
 
-# install brew completitions
+# install brew bash_completions
 if [ -f $(brew --prefix)/etc/bash_completion ]; then
     source $(brew --prefix)/etc/bash_completion
 fi
