@@ -33,22 +33,12 @@ install git
 install go
 install htop
 install htop-osx
-install lame
-install libao
-install libogg
-install libsndfile
-install libtool
-install libvorbis
-install lunchy
-install mad
 install mercurial
 install nginx
 install ngrep
 install nmap
 install node
-install opencore-amr
 install openssl
-install ossp-uuid
 install pkg-config
 install postgresql
 install pstree
@@ -60,7 +50,6 @@ install tmux
 install tree
 install wget
 install xpdf
-install xz
 install zopfli
 
 cleanup
