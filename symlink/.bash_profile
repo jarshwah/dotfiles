@@ -30,9 +30,11 @@ complete -o "nospace" -W "Contacts Calendar Dock Finder Mail Safari iTunes Syste
 
 # install brew completitions
 if [ -f $(brew --prefix)/etc/bash_completion ]; then
-    . $(brew --prefix)/etc/bash_completion
+    source $(brew --prefix)/etc/bash_completion
 fi
-source `brew --prefix`/Library/Contributions/brew_bash_completion.sh
+if [ -f $(brew --prefix)/Library/Contributions/brew_bash_completion.sh ]; then
+    source $(brew --prefix)/Library/Contributions/brew_bash_completion.sh
+fi
 
 # other scripts
 [ -f /usr/local/bin/virtualenvwrapper.sh ] && source /usr/local/bin/virtualenvwrapper.sh
