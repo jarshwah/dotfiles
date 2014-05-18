@@ -5,10 +5,8 @@ DOTFILES_ROOT=$(pwd)
 
 set -e
 
-echo ''
-
 info () {
-  printf "  [ \033[00;34m..\033[0m ] $1"
+  printf "\r  [ \033[00;34m..\033[0m ] $1"
 }
 
 user () {
@@ -24,6 +22,8 @@ fail () {
   echo ''
   exit
 }
+
+echo ""
 
 link_file () {
   local src=$1 dst=$2
@@ -86,10 +86,8 @@ link_file () {
 }
 
 link_dotfiles () {
-  user 'linking dotfiles'
-
+  info "  Linking dotfiles"
   local overwrite_all=false backup_all=false skip_all=false
-
   for src in $(find "$DOTFILES_ROOT/symlink" -depth 1)
   do
     dst="$HOME/$(basename "${src}")"
@@ -101,12 +99,16 @@ install_homebrew() {
     # Check for Homebrew
     if test ! $(which brew)
     then
-      echo "  Installing Homebrew for you."
+      info "  Installing Homebrew for you."
       ruby -e "$(curl -fsSL https://raw.github.com/Homebrew/homebrew/go/install)" > /tmp/homebrew-install.log
     fi
 
-    echo "  To install packages execute `brew bundle $HOME/BrewFile` and `brew bundle $HOME/CaskFile`"
+    info "  To install packages execute 'brew bundle ~/BrewFile' and 'brew bundle ~/CaskFile'"
+    echo ""
 }
 
 link_dotfiles
 install_homebrew
+
+# reload the shell
+exec $SHELL -l
