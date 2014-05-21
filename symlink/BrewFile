@@ -33,7 +33,6 @@ install git
 install go
 install htop
 install htop-osx
-install mercurial
 install nginx
 install ngrep
 install nmap
@@ -42,6 +41,8 @@ install openssl
 install pkg-config
 install postgresql
 install pstree
+install python
+install mercurial
 install python3
 install readline
 install rename
