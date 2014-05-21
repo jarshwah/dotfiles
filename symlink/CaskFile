@@ -9,6 +9,7 @@ cask install firefox 2> /dev/null
 cask install google-chrome 2> /dev/null
 cask install google-drive 2> /dev/null
 cask install google-hangouts 2> /dev/null
+cask install hipchat 2> /dev/null
 cask install istat-menus 2> /dev/null
 cask install iterm2 2> /dev/null
 cask install java 2> /dev/null
