@@ -108,6 +108,7 @@ install_homebrew() {
 }
 
 link_dotfiles
+cp .gitconfig ~/.gitconfig  # copy so that global config doesnt affect us
 install_homebrew
 
 # reload the shell
