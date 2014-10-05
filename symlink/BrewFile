@@ -28,6 +28,7 @@ install --universal pcre
 
 install ack
 install autoconf
+install autojump
 install automake
 install git
 install go
@@ -50,7 +51,6 @@ install ssh-copy-id
 install tmux
 install tree
 install wget
-install xpdf
 install zopfli
 
 cleanup
