@@ -103,7 +103,7 @@ install_homebrew() {
       ruby -e "$(curl -fsSL https://raw.github.com/Homebrew/homebrew/go/install)" > /tmp/homebrew-install.log
     fi
 
-    info "  To install packages execute 'brew bundle ~/BrewFile' and 'brew bundle ~/CaskFile'"
+    info "  To install packages execute '~/brew.sh' "
     echo ""
 }
 
