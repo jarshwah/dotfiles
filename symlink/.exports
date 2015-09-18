@@ -28,3 +28,5 @@ export HOMEBREW_CASK_OPTS="--appdir=/Applications"
 
 export EC2_CERT=~/.aws/smeatonj_cert.pem
 export EC2_PRIVATE_KEY=~/.aws/smeatonj_key.pem
+
+export JAVA_HOME=/Library/Java/JavaVirtualMachines/jdk1.8.0_11.jdk/Contents/Home/
