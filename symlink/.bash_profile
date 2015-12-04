@@ -33,6 +33,9 @@ fi
 if [ -f $(brew --prefix)/Library/Contributions/brew_bash_completion.sh ]; then
     source $(brew --prefix)/Library/Contributions/brew_bash_completion.sh
 fi
+if [ -f $(brew --prefix)/share/bash-completion/bash_completion ]; then
+    source $(brew --prefix)/share/bash-completion/bash_completion
+fi
 
 # other scripts
 [ -f /usr/local/bin/virtualenvwrapper.sh ] && source /usr/local/bin/virtualenvwrapper.sh
