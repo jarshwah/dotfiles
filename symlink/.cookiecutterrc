@@ -1,0 +1,5 @@
+default_context:
+    full_name: "Josh Smeaton"
+    email: "josh.smeaton@gmail.com"
+    github_username: "jarshwah"
+cookiecutter_dir: "~/.cookiecutters/"

@@ -47,7 +47,7 @@ set lz " do not redraw while running macros (much faster) (LazyRedraw)
 set hid " you can change buffer without saving
 set backspace=2 " make backspace work normal
 set whichwrap+=<,>,h,l  " backspace and cursor keys wrap to
-set mouse=a " use mouse everywhere
+set mouse=r " use mouse everywhere
 set shortmess=atI " shortens messages to avoid 'press a key' prompt
 set report=0 " tell us when anything is changed via :...
 set noerrorbells " don't make noise
@@ -70,14 +70,13 @@ set laststatus=2 " always show the status line
 """"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 " Indent Related
 """"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
-set ai " autoindent (filetype indenting instead)
+set noai " autoindent (filetype indenting instead)
 set nosi " smartindent (filetype indenting instead)
-set cindent " do c-style indenting
 set softtabstop=4 " unify
 set shiftwidth=4 " unify
 set tabstop=4 " real tabs should be 4, but they will show with set list on
 set copyindent " but above all -- follow the conventions laid before us
-filetype plugin indent on " load filetype plugins and indent settings
+"filetype plugin indent on " load filetype plugins and indent settings
 
 """"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 " Text Formatting/Layout
@@ -158,7 +157,7 @@ endfunction
 """"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 " Useful abbrevs
 """"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
-iab xdate <c-r>=strftime("%d/%m/%y %H:%M:%S")<cr>
+iab xdate <c-r>=strftime("%FT%T%z")<cr>
 
 """"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 " Autocommands

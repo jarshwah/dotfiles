@@ -4,6 +4,7 @@
 	lg = log -n 20 --color --graph --pretty=format:'%Cred%h%Creset -%C(yellow)%d%Creset %s %Cgreen(%cr) %C(bold blue)<%an>%Creset' --abbrev-commit
 	# View the current working tree status using the short format
 	s = status -s
+	ec = config --global -e
 	# Show the diff between the latest commit and the current state
 	d = !"git diff-index --quiet HEAD -- || clear; git diff --patch-with-stat"
 	# `git di $number` shows the diff between the state `$number` revisions ago and the current state
@@ -26,10 +27,7 @@
 	reb = "!r() { git rebase -i HEAD~$1; }; r"
 	# Undo a `git push`
 	undopush = push -f origin HEAD^:master
-
-[apply]
-	# Detect whitespace errors when applying a patch
-	whitespace = fix
+	pr = !sh -c \"git branch -Df pr/${1} || git fetch upstream pull/${1}/head:pr/${1} && git checkout pr/${1}\"
 
 [core]
     editor = subl -w
@@ -37,7 +35,7 @@
 	excludesfile = ~/.gitignore
 	attributesfile = ~/.gitattributes
 	# Treat spaces before tabs, lines that are indented with 8 or more spaces, and all kinds of trailing whitespace as an error
-	whitespace = space-before-tab,indent-with-non-tab,trailing-space
+	whitespace = space-before-tab,trailing-space
 	trustctime = false
 
 [color]
@@ -84,3 +82,6 @@
 [branch]
 	autosetuprebase = always
 
+[user]
+	name = Josh Smeaton
+	email = josh.smeaton@gmail.com
