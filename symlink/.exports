@@ -33,11 +33,13 @@ export EC2_PRIVATE_KEY=~/.aws/smeatonj_key.pem
 
 export JAVA_HOME=/Library/Java/JavaVirtualMachines/jdk1.8.0_11.jdk/Contents/Home/
 
+VIRTUALENVWRAPPER_PYTHON=/usr/local/bin/python3
+
 #########################################################################
 # Paths
 #########################################################################
 export MYTEMP=~/Documents/Temp
-export MYCODE=~/Development
+export MYCODE=~/dev/
 export MYSCRATCH=~/Documents/Temp/Scratch
 export MYDOWNLOADS=~/Downloads
 export MYDOCUMENTS=~/Documents
