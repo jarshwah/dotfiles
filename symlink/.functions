@@ -205,3 +205,8 @@ function v() {
 function tre() {
 	tree -aC -I '.git|node_modules|bower_components' --dirsfirst "$@" | less -FRNX
 }
+
+function gh() {
+    open https://github.$(git config remote.origin.url | cut -f2 -d. | tr ':' /)
+}
+

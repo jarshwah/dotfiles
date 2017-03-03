@@ -25,6 +25,11 @@ if [ -f $(brew --prefix)/share/bash-completion/bash_completion ]; then
     source $(brew --prefix)/share/bash-completion/bash_completion
 fi
 
+LUNCHY_DIR=$(dirname `gem which lunchy`)/../extras
+if [ -f $LUNCHY_DIR/lunchy-completion.bash ]; then
+  . $LUNCHY_DIR/lunchy-completion.bash
+fi
+
 # other scripts
 [ -f /usr/local/bin/virtualenvwrapper.sh ] && source /usr/local/bin/virtualenvwrapper.sh
 #[[ -s `brew --prefix`/etc/autojump.sh ]] && source `brew --prefix`/etc/autojump.sh
