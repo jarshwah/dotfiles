@@ -37,9 +37,9 @@ alias pubkey="more ~/.ssh/id_rsa.pub | pbcopy | echo '=> Public key copied to pa
 
 # Detect which `ls` flavor is in use
 if ls --color > /dev/null 2>&1; then # GNU `ls`
-	colorflag="--color"
+    colorflag="--color"
 else # OS X `ls`
-	colorflag="-G"
+    colorflag="-G"
 fi
 
 # List all files colorized
@@ -122,6 +122,5 @@ alias flushdns="sudo discoveryutil udnsflushcaches"
 alias fix-bluetooth="sudo kextunload -b com.apple.iokit.BroadcomBluetoothHostControllerUSBTransport && sudo kextload -b com.apple.iokit.BroadcomBluetoothHostControllerUSBTransport"
 alias flush="dscacheutil -flushcache && killall -HUP mDNSResponder"
 
-alias k3gh="open https://github.com/kogan/K3/"
 alias fixhangouts="sudo killall VDCAssistant"
 alias dc='docker-compose'
