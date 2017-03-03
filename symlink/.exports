@@ -3,7 +3,7 @@ export EDITOR="subl -w"
 # Larger bash history (allow 32³ entries; default is 500)
 export HISTSIZE=32768
 export HISTFILESIZE=$HISTSIZE
-export HISTCONTROL=ignoredups:erasedups
+export HISTCONTROL=ignoreboth:erasedups
 # Make some commands not show up in history
 export HISTIGNORE="ls:cd:date:exit:bg:fg:history"
 export HISTTIMEFORMAT='%F %T '
@@ -32,6 +32,11 @@ export EC2_CERT=~/.aws/smeatonj_cert.pem
 export EC2_PRIVATE_KEY=~/.aws/smeatonj_key.pem
 
 export JAVA_HOME=/Library/Java/JavaVirtualMachines/jdk1.8.0_11.jdk/Contents/Home/
+export ORACLE_HOME=/usr/local/oracleclient/instantclient_12_1/
+export DYLD_LIBRARY_PATH="$DYLD_LIBRARY_PATH:$ORACLE_HOME"
+export LD_LIBRARY_PATH="$LD_LIBRARY_PATH:$ORACLE_HOME"
+export CPPFLAGS="-I/usr/local/include"
+export LDFLAGS="-L/usr/local/lib"
 
 #########################################################################
 # Paths

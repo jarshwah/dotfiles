@@ -8,4 +8,6 @@ PATH="/usr/local/opt/coreutils/libexec/gnubin:$PATH"
 PATH="/usr/local/share/npm/bin:${PATH}"
 # Local bin first!
 PATH="$HOME/bin:$PATH"
+# Link oracle client libraries
+PATH="$PATH:/usr/local/oracleclient/instantclient_12_1"
 export PATH
