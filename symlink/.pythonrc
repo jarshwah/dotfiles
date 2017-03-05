@@ -6,7 +6,7 @@ try:
     import sys
     import platform
 except ImportError as exception:
-    print('Shell Enhancement module problem: {1}').format(exception)
+    print('Shell Enhancement module problem: {0}').format(exception)
 else:
     # Enable Tab Completion
     if 'libedit' in readline.__doc__:     # different bind libedit
@@ -15,8 +15,8 @@ else:
         readline.parse_and_bind("tab: complete")
 
     # Enable History File
-    history_file = os.environ.get("PYTHON_HISTORY_FILE", 
-                                  os.path.join(os.environ['HOME'], 
+    history_file = os.environ.get("PYTHON_HISTORY_FILE",
+                                  os.path.join(os.environ['HOME'],
                                                '.pythonhistory'))
 
     if os.path.isfile(history_file):
