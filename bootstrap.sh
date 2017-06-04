@@ -120,10 +120,12 @@ install_zsh() {
   fi
 
   # Set the default shell to zsh if it isn't currently set to zsh
+  if ! grep -Fxq "/usr/local/bin/zsh" /etc/shells; then
+    echo "/usr/local/bin/zsh" | sudo tee -a /etc/shells
+  fi
+
   if [[ ! $(echo $SHELL) == /usr/local/bin/zsh ]]; then
-    if ! grep -Fxq "/usr/local/bin/zsh" /etc/shells; then
-      echo "/usr/local/bin/zsh" | sudo tee -a /etc/shells
-    fi
+
     chsh -s /usr/local/bin/zsh
   fi
 }

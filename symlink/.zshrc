@@ -1,3 +1,8 @@
+# profiling: env ZSH_PROF= zsh -ic zprof
+if [[ -v ZSH_PROF ]]; then
+  zmodload zsh/zprof
+fi
+
 # Path to your oh-my-zsh installation.
 export ZSH=/Users/josh/.oh-my-zsh
 export DEFAULT_USER="josh"  # avoid adding user@host to prompt
@@ -5,7 +10,11 @@ ZSH_THEME="agnoster"
 HYPHEN_INSENSITIVE="true"
 ENABLE_CORRECTION="true"
 HIST_STAMPS="yyyy-mm-dd"
-plugins=(autojump aws brew django docker encode64 extract git jsontools npm osx pip pyenv python ssh-agent vagrant virtualenvwrapper z)
+DISABLE_UPDATE_PROMPT=true
+
+fpath=(/usr/local/share/zsh-completions $fpath)
+[ -f /usr/local/bin/virtualenvwrapper.sh ] && source /usr/local/bin/virtualenvwrapper.sh
+plugins=(autojump brew django docker encode64 extract git osx pip python vagrant z)
 
 # Load our own dotfiles
 for file in ~/.{exports,path,aliases,functions,extra}; do
