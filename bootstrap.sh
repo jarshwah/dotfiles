@@ -107,9 +107,28 @@ install_homebrew() {
     echo ""
 }
 
+install_zsh() {
+  # install zsh
+  if [[ ! brew ls --versions zsh > /dev/null ]]; then
+    info " Installing zsh"
+    brew install zsh
+  fi
+
+  # install oh-my-zsh
+  if [[ ! -d ~/.oh-my-zsh ]]; then
+    sh -c "$(curl -fsSL https://raw.githubusercontent.com/robbyrussell/oh-my-zsh/master/tools/install.sh)"
+  fi
+
+  # Set the default shell to zsh if it isn't currently set to zsh
+  if [[ ! $(echo $SHELL) == $(which zsh) ]]; then
+    chsh -s $(which zsh)
+  fi
+}
+
 link_dotfiles
 cp .gitconfig ~/.gitconfig  # copy so that global config doesnt affect us
 install_homebrew
+install_zsh
 
 # reload the shell
 exec $SHELL -l

@@ -56,5 +56,6 @@ brew install tmux
 brew install tree
 brew install wget
 brew install zopfli
+brew install zsh
 
 brew cleanup
