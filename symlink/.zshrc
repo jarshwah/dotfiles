@@ -1,8 +1,6 @@
-# If you come from bash you might have to change your $PATH.
-# export PATH=$HOME/bin:/usr/local/bin:$PATH
-
 # Path to your oh-my-zsh installation.
 export ZSH=/Users/josh/.oh-my-zsh
+export DEFAULT_USER="josh"  # avoid adding user@host to prompt
 ZSH_THEME="agnoster"
 HYPHEN_INSENSITIVE="true"
 ENABLE_CORRECTION="true"
@@ -10,16 +8,10 @@ HIST_STAMPS="yyyy-mm-dd"
 plugins=(autojump aws brew django docker encode64 extract git jsontools npm osx pip pyenv python ssh-agent vagrant virtualenvwrapper z)
 
 # Load our own dotfiles
-for file in ~/.{exports,path,bash_prompt,aliases,functions,extra}; do
+for file in ~/.{exports,path,aliases,functions,extra}; do
     [ -r "$file" ] && [ -f "$file" ] && source "$file"
 done
 unset file
-
-
-for file in $HOME/.{shell_exports,shell_aliases,shell_functions,shell_config}; do
-  [ -r "$file" ] && [ -f "$file" ] && source "$file";
-done;
-unset file;
 
 source $ZSH/oh-my-zsh.sh
 
