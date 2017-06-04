@@ -125,8 +125,12 @@ install_zsh() {
   fi
 
   if [[ ! $(echo $SHELL) == /usr/local/bin/zsh ]]; then
-
     chsh -s /usr/local/bin/zsh
+  fi
+
+  # Load up the powerlevel 9k theme
+  if [[ ! -d ~/.oh-my-zsh/custom/themes/powerlevel9k ]]; then
+    git clone https://github.com/bhilburn/powerlevel9k.git ~/.oh-my-zsh/custom/themes/powerlevel9k
   fi
 }
 

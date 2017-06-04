@@ -1,19 +1,23 @@
 # profiling: env ZSH_PROF= zsh -ic zprof
-if [[ -v ZSH_PROF ]]; then
-  zmodload zsh/zprof
-fi
+#if [[ -v ZSH_PROF ]]; then
+#  zmodload zsh/zprof
+#fi
 
 # Path to your oh-my-zsh installation.
 export ZSH=/Users/josh/.oh-my-zsh
 export DEFAULT_USER="josh"  # avoid adding user@host to prompt
-ZSH_THEME="agnoster"
+
+ZSH_THEME="powerlevel9k/powerlevel9k"
+POWERLEVEL9K_LEFT_PROMPT_ELEMENTS=(status dir dir_writable vcs root_indicator)
+POWERLEVEL9K_RIGHT_PROMPT_ELEMENTS=(virtualenv command_execution_time time)
+POWERLEVEL9K_COMMAND_EXECUTION_TIME_THRESHOLD=3
+POWERLEVEL9K_COMMAND_EXECUTION_TIME_PRECISION=1
 HYPHEN_INSENSITIVE="true"
 ENABLE_CORRECTION="true"
 HIST_STAMPS="yyyy-mm-dd"
 DISABLE_UPDATE_PROMPT=true
 
 fpath=(/usr/local/share/zsh-completions $fpath)
-[ -f /usr/local/bin/virtualenvwrapper.sh ] && source /usr/local/bin/virtualenvwrapper.sh
 plugins=(autojump brew django docker encode64 extract git osx pip python vagrant z)
 
 # Load our own dotfiles
@@ -22,8 +26,10 @@ for file in ~/.{exports,path,aliases,functions,extra}; do
 done
 unset file
 
-source $ZSH/oh-my-zsh.sh
+# Let paths be set first
+[ -f /usr/local/bin/virtualenvwrapper.sh ] && source /usr/local/bin/virtualenvwrapper.sh
 
+source $ZSH/oh-my-zsh.sh
 
 # CASE_SENSITIVE="true"
 # DISABLE_AUTO_UPDATE="true"
