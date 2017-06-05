@@ -134,10 +134,10 @@ install_zsh() {
   fi
 }
 
-link_dotfiles
 cp .gitconfig ~/.gitconfig  # copy so that global config doesnt affect us
 install_homebrew
 install_zsh
+link_dotfiles
 
 # reload the shell
 exec $SHELL -l

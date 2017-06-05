@@ -4,8 +4,7 @@
 #fi
 
 # Path to your oh-my-zsh installation.
-export ZSH=/Users/josh/.oh-my-zsh
-export DEFAULT_USER="josh"  # avoid adding user@host to prompt
+export ZSH=~/.oh-my-zsh
 
 ZSH_THEME="powerlevel9k/powerlevel9k"
 POWERLEVEL9K_LEFT_PROMPT_ELEMENTS=(status dir dir_writable vcs root_indicator)
